@@ -20,3 +20,11 @@ for (let row = 0; row < 8; row++) {
     rowDiv.appendChild(htmlSquare);
   }
 }
+
+imgWhiteKing = document.createElement("img");
+imgWhiteKing.src = require("../images/Chess_klt60.png");
+imgWhiteKing.className = "src";
+imgWhiteKing.alt = "White King";
+imgWhiteKing.width = "60";
+
+document.getElementById("e1").appendChild(imgWhiteKing);

@@ -117,7 +117,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"app.js":[function(require,module,exports) {
+})({"../images/Chess_klt60.png":[function(require,module,exports) {
+module.exports = "/Chess_klt60.ebf11d1d.png";
+},{}],"app.js":[function(require,module,exports) {
 var cols = ["a", "b", "c", "d", "e", "f", "g", "h"];
 var board = document.getElementById("chess-board"); // Maps letters onto numbers
 
@@ -161,7 +163,14 @@ for (var row = 0; row < 8; row++) {
     }
   }
 }
-},{}],"../../.nvm/versions/node/v13.8.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+imgWhiteKing = document.createElement("img");
+imgWhiteKing.src = require("../images/Chess_klt60.png");
+imgWhiteKing.className = "src";
+imgWhiteKing.alt = "White King";
+imgWhiteKing.width = "60";
+document.getElementById("e1").appendChild(imgWhiteKing);
+},{"../images/Chess_klt60.png":"../images/Chess_klt60.png"}],"../../.nvm/versions/node/v13.8.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -189,7 +198,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58603" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61683" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,0 +1,24 @@
+#game {
+  display: flex;
+  justify-content: center;
+}
+
+#chess-board {
+  display: flex;
+  flex-direction: column-reverse;
+  align-content: flex-end;
+}
+
+.row {
+  display: flex;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+.black {
+  background-color: darkolivegreen;
+}

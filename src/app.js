@@ -1,3 +1,5 @@
+import Game from "./Game.js";
+
 const cols = ["a", "b", "c", "d", "e", "f", "g", "h"];
 const board = document.getElementById("chess-board");
 
@@ -21,10 +23,13 @@ for (let row = 0; row < 8; row++) {
   }
 }
 
-imgWhiteKing = document.createElement("img");
+const imgWhiteKing = document.createElement("img");
 imgWhiteKing.src = require("../images/Chess_klt60.png");
 imgWhiteKing.className = "src";
 imgWhiteKing.alt = "White King";
 imgWhiteKing.width = "60";
 
 document.getElementById("e1").appendChild(imgWhiteKing);
+
+const game = new Game();
+console.log(game);

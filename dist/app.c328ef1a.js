@@ -127,8 +127,11 @@ exports.default = void 0;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Piece = function Piece() {
+var Piece = function Piece(owner, img) {
   _classCallCheck(this, Piece);
+
+  this.owner = owner;
+  this.image = img;
 };
 
 var _default = Piece;
@@ -168,10 +171,10 @@ var Pawn = /*#__PURE__*/function (_Piece) {
 
   var _super = _createSuper(Pawn);
 
-  function Pawn() {
+  function Pawn(owner, img) {
     _classCallCheck(this, Pawn);
 
-    return _super.apply(this, arguments);
+    return _super.call(this, owner, img);
   }
 
   return Pawn;
@@ -214,10 +217,10 @@ var Bishop = /*#__PURE__*/function (_Piece) {
 
   var _super = _createSuper(Bishop);
 
-  function Bishop() {
+  function Bishop(owner, img) {
     _classCallCheck(this, Bishop);
 
-    return _super.apply(this, arguments);
+    return _super.call(this, owner, img);
   }
 
   return Bishop;
@@ -260,10 +263,10 @@ var Knight = /*#__PURE__*/function (_Piece) {
 
   var _super = _createSuper(Knight);
 
-  function Knight() {
+  function Knight(owner, img) {
     _classCallCheck(this, Knight);
 
-    return _super.apply(this, arguments);
+    return _super.call(this, owner, img);
   }
 
   return Knight;
@@ -306,10 +309,10 @@ var Rook = /*#__PURE__*/function (_Piece) {
 
   var _super = _createSuper(Rook);
 
-  function Rook() {
+  function Rook(owner, img) {
     _classCallCheck(this, Rook);
 
-    return _super.apply(this, arguments);
+    return _super.call(this, owner, img);
   }
 
   return Rook;
@@ -352,10 +355,10 @@ var Queen = /*#__PURE__*/function (_Piece) {
 
   var _super = _createSuper(Queen);
 
-  function Queen() {
+  function Queen(owner, img) {
     _classCallCheck(this, Queen);
 
-    return _super.apply(this, arguments);
+    return _super.call(this, owner, img);
   }
 
   return Queen;
@@ -398,10 +401,10 @@ var King = /*#__PURE__*/function (_Piece) {
 
   var _super = _createSuper(King);
 
-  function King() {
+  function King(owner, img) {
     _classCallCheck(this, King);
 
-    return _super.apply(this, arguments);
+    return _super.call(this, owner, img);
   }
 
   return King;
@@ -409,7 +412,46 @@ var King = /*#__PURE__*/function (_Piece) {
 
 var _default = King;
 exports.default = _default;
-},{"./Piece.js":"Piece.js"}],"Player.js":[function(require,module,exports) {
+},{"./Piece.js":"Piece.js"}],"images/Chess_bdt60.png":[function(require,module,exports) {
+module.exports = "/Chess_bdt60.be8cff8f.png";
+},{}],"images/Chess_klt60.png":[function(require,module,exports) {
+module.exports = "/Chess_klt60.99d87d31.png";
+},{}],"images/Chess_kdt60.png":[function(require,module,exports) {
+module.exports = "/Chess_kdt60.cb048e8d.png";
+},{}],"images/Chess_blt60.png":[function(require,module,exports) {
+module.exports = "/Chess_blt60.e65e2137.png";
+},{}],"images/Chess_ndt60.png":[function(require,module,exports) {
+module.exports = "/Chess_ndt60.c9d49293.png";
+},{}],"images/Chess_nlt60.png":[function(require,module,exports) {
+module.exports = "/Chess_nlt60.3288c199.png";
+},{}],"images/Chess_plt60.png":[function(require,module,exports) {
+module.exports = "/Chess_plt60.62ebd350.png";
+},{}],"images/Chess_pdt60.png":[function(require,module,exports) {
+module.exports = "/Chess_pdt60.c1e9e5d0.png";
+},{}],"images/Chess_qdt60.png":[function(require,module,exports) {
+module.exports = "/Chess_qdt60.30799a77.png";
+},{}],"images/Chess_qlt60.png":[function(require,module,exports) {
+module.exports = "/Chess_qlt60.6629caa5.png";
+},{}],"images/Chess_rdt60.png":[function(require,module,exports) {
+module.exports = "/Chess_rdt60.729f6c66.png";
+},{}],"images/Chess_rlt60.png":[function(require,module,exports) {
+module.exports = "/Chess_rlt60.a51c5eab.png";
+},{}],"images/*.png":[function(require,module,exports) {
+module.exports = {
+  "Chess_bdt60": require("./Chess_bdt60.png"),
+  "Chess_klt60": require("./Chess_klt60.png"),
+  "Chess_kdt60": require("./Chess_kdt60.png"),
+  "Chess_blt60": require("./Chess_blt60.png"),
+  "Chess_ndt60": require("./Chess_ndt60.png"),
+  "Chess_nlt60": require("./Chess_nlt60.png"),
+  "Chess_plt60": require("./Chess_plt60.png"),
+  "Chess_pdt60": require("./Chess_pdt60.png"),
+  "Chess_qdt60": require("./Chess_qdt60.png"),
+  "Chess_qlt60": require("./Chess_qlt60.png"),
+  "Chess_rdt60": require("./Chess_rdt60.png"),
+  "Chess_rlt60": require("./Chess_rlt60.png")
+};
+},{"./Chess_bdt60.png":"images/Chess_bdt60.png","./Chess_klt60.png":"images/Chess_klt60.png","./Chess_kdt60.png":"images/Chess_kdt60.png","./Chess_blt60.png":"images/Chess_blt60.png","./Chess_ndt60.png":"images/Chess_ndt60.png","./Chess_nlt60.png":"images/Chess_nlt60.png","./Chess_plt60.png":"images/Chess_plt60.png","./Chess_pdt60.png":"images/Chess_pdt60.png","./Chess_qdt60.png":"images/Chess_qdt60.png","./Chess_qlt60.png":"images/Chess_qlt60.png","./Chess_rdt60.png":"images/Chess_rdt60.png","./Chess_rlt60.png":"images/Chess_rlt60.png"}],"Player.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -429,6 +471,8 @@ var _Queen = _interopRequireDefault(require("./Queen.js"));
 
 var _King = _interopRequireDefault(require("./King.js"));
 
+var _ = _interopRequireDefault(require("./images/*.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -447,16 +491,17 @@ var Player = /*#__PURE__*/function () {
     this.knights = this.createKnights();
     this.rooks = this.createRooks();
     this.queens = this.createQueen();
-    this.king = new _King.default();
+    this.king = this.createKing();
   }
 
   _createClass(Player, [{
     key: "createPawns",
     value: function createPawns() {
       var pawns = [];
+      var pawn_img = this.color === "white" ? _.default.Chess_plt60 : _.default.Chess_pdt60;
 
       for (var i = 0; i < 8; i++) {
-        var pawn = new _Pawn.default();
+        var pawn = new _Pawn.default(this, pawn_img);
         pawns.push(pawn);
       }
 
@@ -466,9 +511,10 @@ var Player = /*#__PURE__*/function () {
     key: "createBishops",
     value: function createBishops() {
       var bishops = [];
+      var bishop_img = this.color === "white" ? _.default.Chess_blt60 : _.default.Chess_bdt60;
 
       for (var i = 0; i < 2; i++) {
-        var bishop = new _Bishop.default();
+        var bishop = new _Bishop.default(this, bishop_img);
         bishops.push(bishop);
       }
 
@@ -478,9 +524,10 @@ var Player = /*#__PURE__*/function () {
     key: "createKnights",
     value: function createKnights() {
       var knights = [];
+      var knight_img = this.color === "white" ? _.default.Chess_nlt60 : _.default.Chess_ndt60;
 
       for (var i = 0; i < 2; i++) {
-        var knight = new _Knight.default();
+        var knight = new _Knight.default(this, knight_img);
         knights.push(knight);
       }
 
@@ -490,9 +537,10 @@ var Player = /*#__PURE__*/function () {
     key: "createRooks",
     value: function createRooks() {
       var rooks = [];
+      var rook_img = this.color === "white" ? _.default.Chess_rlt60 : _.default.Chess_rdt60;
 
       for (var i = 0; i < 2; i++) {
-        var rook = new _Rook.default();
+        var rook = new _Rook.default(this, rook_img);
         rooks.push(rook);
       }
 
@@ -502,9 +550,17 @@ var Player = /*#__PURE__*/function () {
     key: "createQueen",
     value: function createQueen() {
       var queens = [];
-      var queen = new _Queen.default();
+      var queen_img = this.color === "white" ? _.default.Chess_qlt60 : _.default.Chess_qdt60;
+      var queen = new _Queen.default(this, queen_img);
       queens.push(queen);
       return queens;
+    }
+  }, {
+    key: "createKing",
+    value: function createKing() {
+      var king_img = this.color === "white" ? _.default.Chess_klt60 : _.default.Chess_kdt60;
+      var king = new _King.default(this, king_img);
+      return king;
     }
   }]);
 
@@ -513,7 +569,7 @@ var Player = /*#__PURE__*/function () {
 
 var _default = Player;
 exports.default = _default;
-},{"./Pawn.js":"Pawn.js","./Bishop.js":"Bishop.js","./Knight.js":"Knight.js","./Rook.js":"Rook.js","./Queen.js":"Queen.js","./King.js":"King.js"}],"Square.js":[function(require,module,exports) {
+},{"./Pawn.js":"Pawn.js","./Bishop.js":"Bishop.js","./Knight.js":"Knight.js","./Rook.js":"Rook.js","./Queen.js":"Queen.js","./King.js":"King.js","./images/*.png":"images/*.png"}],"Square.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -527,6 +583,7 @@ var Square = function Square(name) {
   _classCallCheck(this, Square);
 
   this.name = name;
+  this.piece = null;
 };
 
 var _default = Square;
@@ -598,6 +655,22 @@ var Board = /*#__PURE__*/function () {
 
       return board;
     }
+  }, {
+    key: "renderPieces",
+    value: function renderPieces() {
+      for (var row = 0; row < this.rows; row++) {
+        for (var col = 0; col < this.cols; col++) {
+          var piece = this.squares[row][col].piece;
+
+          if (piece) {
+            var htmlPiece = document.createElement("img");
+            htmlPiece.src = piece.image;
+            htmlPiece.alt = "img";
+            document.getElementById("".concat(col, "-").concat(row)).appendChild(htmlPiece);
+          }
+        }
+      }
+    }
   }]);
 
   return Board;
@@ -629,14 +702,39 @@ var Game = /*#__PURE__*/function () {
   function Game() {
     _classCallCheck(this, Game);
 
-    this.playerWhite = new _Player.default();
-    this.playerBlack = new _Player.default();
-    this.board = new _Board.default(); //setUpPieces();
+    this.playerWhite = new _Player.default("white");
+    this.playerBlack = new _Player.default("black");
+    this.board = new _Board.default();
   }
 
   _createClass(Game, [{
     key: "setUpPieces",
-    value: function setUpPieces() {}
+    value: function setUpPieces() {
+      for (var i = 0; i < 8; i++) {
+        this.board.squares[1][i].piece = this.playerWhite.pawns[i];
+      }
+
+      for (var _i = 0; _i < 8; _i++) {
+        this.board.squares[6][_i].piece = this.playerBlack.pawns[_i];
+      }
+
+      this.board.squares[0][0].piece = this.playerWhite.rooks[0];
+      this.board.squares[0][1].piece = this.playerWhite.knights[0];
+      this.board.squares[0][2].piece = this.playerWhite.bishops[0];
+      this.board.squares[0][3].piece = this.playerWhite.queens[0];
+      this.board.squares[0][4].piece = this.playerWhite.king;
+      this.board.squares[0][5].piece = this.playerWhite.bishops[1];
+      this.board.squares[0][6].piece = this.playerWhite.knights[1];
+      this.board.squares[0][7].piece = this.playerWhite.rooks[1];
+      this.board.squares[7][0].piece = this.playerBlack.rooks[0];
+      this.board.squares[7][1].piece = this.playerBlack.knights[0];
+      this.board.squares[7][2].piece = this.playerBlack.bishops[0];
+      this.board.squares[7][3].piece = this.playerBlack.queens[0];
+      this.board.squares[7][4].piece = this.playerBlack.king;
+      this.board.squares[7][5].piece = this.playerBlack.bishops[1];
+      this.board.squares[7][6].piece = this.playerBlack.knights[1];
+      this.board.squares[7][7].piece = this.playerBlack.rooks[1];
+    }
   }]);
 
   return Game;
@@ -644,31 +742,20 @@ var Game = /*#__PURE__*/function () {
 
 var _default = Game;
 exports.default = _default;
-},{"./Player.js":"Player.js","./Board.js":"Board.js"}],"../images/Chess_klt60.png":[function(require,module,exports) {
-module.exports = "/Chess_klt60.ebf11d1d.png";
-},{}],"app.js":[function(require,module,exports) {
+},{"./Player.js":"Player.js","./Board.js":"Board.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
 var _Game = _interopRequireDefault(require("./Game.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var cols = ["a", "b", "c", "d", "e", "f", "g", "h"];
+// const cols = ["a", "b", "c", "d", "e", "f", "g", "h"];
 var board = document.getElementById("chess-board"); // Maps letters onto numbers
-
-var alphaVal = function alphaVal(s) {
-  return s.toLowerCase().charCodeAt(0) - 97 + 1;
-}; // Get square color
-
+// const alphaVal = (s) => s.toLowerCase().charCodeAt(0) - 97 + 1;
+// Get square color
 
 var getSquareColor = function getSquareColor(row, col) {
-  return (row + alphaVal(col)) % 2 == 0 ? "white" : "black";
+  return (row + col + 1) % 2 == 0 ? "white" : "black";
 };
 
 for (var row = 0; row < 8; row++) {
@@ -676,33 +763,19 @@ for (var row = 0; row < 8; row++) {
   rowDiv.setAttribute("class", "row");
   board.appendChild(rowDiv);
 
-  var _iterator = _createForOfIteratorHelper(cols),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var col = _step.value;
-      var htmlSquare = document.createElement("div");
-      htmlSquare.id = "".concat(col).concat(row + 1);
-      htmlSquare.className = "square ".concat(getSquareColor(row, col));
-      rowDiv.appendChild(htmlSquare);
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
+  for (var col = 0; col < 8; col++) {
+    var htmlSquare = document.createElement("div");
+    htmlSquare.id = "".concat(col, "-").concat(row);
+    htmlSquare.className = "square ".concat(getSquareColor(row, col));
+    rowDiv.appendChild(htmlSquare);
   }
 }
 
-var imgWhiteKing = document.createElement("img");
-imgWhiteKing.src = require("../images/Chess_klt60.png");
-imgWhiteKing.className = "src";
-imgWhiteKing.alt = "White King";
-imgWhiteKing.width = "60";
-document.getElementById("e1").appendChild(imgWhiteKing);
 var game = new _Game.default();
 console.log(game);
-},{"./Game.js":"Game.js","../images/Chess_klt60.png":"../images/Chess_klt60.png"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+game.setUpPieces();
+game.board.renderPieces();
+},{"./Game.js":"Game.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -730,7 +803,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53088" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57385" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -23,6 +23,21 @@ class Board {
     }
     return board;
   }
+
+  renderPieces() {
+    for (let row = 0; row < this.rows; row++) {
+      for (let col = 0; col < this.cols; col++) {
+        const piece = this.squares[row][col].piece;
+
+        if (piece) {
+          const htmlPiece = document.createElement("img");
+          htmlPiece.src = piece.image;
+          htmlPiece.alt = "img";
+          document.getElementById(`${col}-${row}`).appendChild(htmlPiece);
+        }
+      }
+    }
+  }
 }
 
 export default Board;

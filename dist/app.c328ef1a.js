@@ -172,9 +172,13 @@ var Pawn = /*#__PURE__*/function (_Piece) {
   var _super = _createSuper(Pawn);
 
   function Pawn(owner, img) {
+    var _this;
+
     _classCallCheck(this, Pawn);
 
-    return _super.call(this, owner, img);
+    _this = _super.call(this, owner, img);
+    _this.name = "pawn";
+    return _this;
   }
 
   return Pawn;
@@ -218,9 +222,13 @@ var Bishop = /*#__PURE__*/function (_Piece) {
   var _super = _createSuper(Bishop);
 
   function Bishop(owner, img) {
+    var _this;
+
     _classCallCheck(this, Bishop);
 
-    return _super.call(this, owner, img);
+    _this = _super.call(this, owner, img);
+    _this.name = "bishop";
+    return _this;
   }
 
   return Bishop;
@@ -264,9 +272,13 @@ var Knight = /*#__PURE__*/function (_Piece) {
   var _super = _createSuper(Knight);
 
   function Knight(owner, img) {
+    var _this;
+
     _classCallCheck(this, Knight);
 
-    return _super.call(this, owner, img);
+    _this = _super.call(this, owner, img);
+    _this.name = "knight";
+    return _this;
   }
 
   return Knight;
@@ -310,9 +322,13 @@ var Rook = /*#__PURE__*/function (_Piece) {
   var _super = _createSuper(Rook);
 
   function Rook(owner, img) {
+    var _this;
+
     _classCallCheck(this, Rook);
 
-    return _super.call(this, owner, img);
+    _this = _super.call(this, owner, img);
+    _this.name = "rook";
+    return _this;
   }
 
   return Rook;
@@ -356,9 +372,13 @@ var Queen = /*#__PURE__*/function (_Piece) {
   var _super = _createSuper(Queen);
 
   function Queen(owner, img) {
+    var _this;
+
     _classCallCheck(this, Queen);
 
-    return _super.call(this, owner, img);
+    _this = _super.call(this, owner, img);
+    _this.name = "queen";
+    return _this;
   }
 
   return Queen;
@@ -402,9 +422,13 @@ var King = /*#__PURE__*/function (_Piece) {
   var _super = _createSuper(King);
 
   function King(owner, img) {
+    var _this;
+
     _classCallCheck(this, King);
 
-    return _super.call(this, owner, img);
+    _this = _super.call(this, owner, img);
+    _this.name = "king";
+    return _this;
   }
 
   return King;
@@ -414,20 +438,20 @@ var _default = King;
 exports.default = _default;
 },{"./Piece.js":"Piece.js"}],"images/Chess_bdt60.png":[function(require,module,exports) {
 module.exports = "/Chess_bdt60.be8cff8f.png";
+},{}],"images/Chess_blt60.png":[function(require,module,exports) {
+module.exports = "/Chess_blt60.e65e2137.png";
 },{}],"images/Chess_klt60.png":[function(require,module,exports) {
 module.exports = "/Chess_klt60.99d87d31.png";
 },{}],"images/Chess_kdt60.png":[function(require,module,exports) {
 module.exports = "/Chess_kdt60.cb048e8d.png";
-},{}],"images/Chess_blt60.png":[function(require,module,exports) {
-module.exports = "/Chess_blt60.e65e2137.png";
 },{}],"images/Chess_ndt60.png":[function(require,module,exports) {
 module.exports = "/Chess_ndt60.c9d49293.png";
 },{}],"images/Chess_nlt60.png":[function(require,module,exports) {
 module.exports = "/Chess_nlt60.3288c199.png";
-},{}],"images/Chess_plt60.png":[function(require,module,exports) {
-module.exports = "/Chess_plt60.62ebd350.png";
 },{}],"images/Chess_pdt60.png":[function(require,module,exports) {
 module.exports = "/Chess_pdt60.c1e9e5d0.png";
+},{}],"images/Chess_plt60.png":[function(require,module,exports) {
+module.exports = "/Chess_plt60.62ebd350.png";
 },{}],"images/Chess_qdt60.png":[function(require,module,exports) {
 module.exports = "/Chess_qdt60.30799a77.png";
 },{}],"images/Chess_qlt60.png":[function(require,module,exports) {
@@ -439,19 +463,19 @@ module.exports = "/Chess_rlt60.a51c5eab.png";
 },{}],"images/*.png":[function(require,module,exports) {
 module.exports = {
   "Chess_bdt60": require("./Chess_bdt60.png"),
+  "Chess_blt60": require("./Chess_blt60.png"),
   "Chess_klt60": require("./Chess_klt60.png"),
   "Chess_kdt60": require("./Chess_kdt60.png"),
-  "Chess_blt60": require("./Chess_blt60.png"),
   "Chess_ndt60": require("./Chess_ndt60.png"),
   "Chess_nlt60": require("./Chess_nlt60.png"),
-  "Chess_plt60": require("./Chess_plt60.png"),
   "Chess_pdt60": require("./Chess_pdt60.png"),
+  "Chess_plt60": require("./Chess_plt60.png"),
   "Chess_qdt60": require("./Chess_qdt60.png"),
   "Chess_qlt60": require("./Chess_qlt60.png"),
   "Chess_rdt60": require("./Chess_rdt60.png"),
   "Chess_rlt60": require("./Chess_rlt60.png")
 };
-},{"./Chess_bdt60.png":"images/Chess_bdt60.png","./Chess_klt60.png":"images/Chess_klt60.png","./Chess_kdt60.png":"images/Chess_kdt60.png","./Chess_blt60.png":"images/Chess_blt60.png","./Chess_ndt60.png":"images/Chess_ndt60.png","./Chess_nlt60.png":"images/Chess_nlt60.png","./Chess_plt60.png":"images/Chess_plt60.png","./Chess_pdt60.png":"images/Chess_pdt60.png","./Chess_qdt60.png":"images/Chess_qdt60.png","./Chess_qlt60.png":"images/Chess_qlt60.png","./Chess_rdt60.png":"images/Chess_rdt60.png","./Chess_rlt60.png":"images/Chess_rlt60.png"}],"Player.js":[function(require,module,exports) {
+},{"./Chess_bdt60.png":"images/Chess_bdt60.png","./Chess_blt60.png":"images/Chess_blt60.png","./Chess_klt60.png":"images/Chess_klt60.png","./Chess_kdt60.png":"images/Chess_kdt60.png","./Chess_ndt60.png":"images/Chess_ndt60.png","./Chess_nlt60.png":"images/Chess_nlt60.png","./Chess_pdt60.png":"images/Chess_pdt60.png","./Chess_plt60.png":"images/Chess_plt60.png","./Chess_qdt60.png":"images/Chess_qdt60.png","./Chess_qlt60.png":"images/Chess_qlt60.png","./Chess_rdt60.png":"images/Chess_rdt60.png","./Chess_rlt60.png":"images/Chess_rlt60.png"}],"Player.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -623,11 +647,24 @@ var Board = /*#__PURE__*/function () {
     this.squares = this.createSquares();
   }
   /**
-   * Creates a 2D array of squares
+   * Gets the Square by the given name
+   * @param {String} name - the name of the square in chess notation
+   * @returns {Square} - the Square object at the specified location on the board
    */
 
 
   _createClass(Board, [{
+    key: "getSquare",
+    value: function getSquare(name) {
+      var column = name.charCodeAt(0) - 97;
+      var row = name.charAt(1) - 1;
+      return this.squares[row][column];
+    }
+    /**
+     * Creates a 2D array of squares
+     */
+
+  }, {
     key: "createSquares",
     value: function createSquares() {
       var board = [];
@@ -656,18 +693,60 @@ var Board = /*#__PURE__*/function () {
       return board;
     }
   }, {
+    key: "renderBoard",
+    value: function renderBoard() {
+      // Get square color
+      var getSquareColor = function getSquareColor(row, col) {
+        return (row + col) % 2 == 0 ? "white" : "black";
+      };
+
+      for (var row = 0; row < 8; row++) {
+        var rowDiv = document.createElement("div");
+        rowDiv.setAttribute("class", "row");
+        document.getElementById("chess-board").appendChild(rowDiv);
+
+        var _iterator2 = _createForOfIteratorHelper(colNames),
+            _step2;
+
+        try {
+          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+            var col = _step2.value;
+            var htmlSquare = document.createElement("div");
+            htmlSquare.id = "".concat(col).concat(row + 1);
+            htmlSquare.className = "square ".concat(getSquareColor(row, col.charCodeAt(0)));
+            rowDiv.appendChild(htmlSquare);
+          }
+        } catch (err) {
+          _iterator2.e(err);
+        } finally {
+          _iterator2.f();
+        }
+      }
+    }
+  }, {
     key: "renderPieces",
     value: function renderPieces() {
       for (var row = 0; row < this.rows; row++) {
-        for (var col = 0; col < this.cols; col++) {
-          var piece = this.squares[row][col].piece;
+        var _iterator3 = _createForOfIteratorHelper(colNames),
+            _step3;
 
-          if (piece) {
-            var htmlPiece = document.createElement("img");
-            htmlPiece.src = piece.image;
-            htmlPiece.alt = "img";
-            document.getElementById("".concat(col, "-").concat(row)).appendChild(htmlPiece);
+        try {
+          for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+            var col = _step3.value;
+            var piece = this.getSquare("".concat(col).concat(row + 1)).piece;
+
+            if (piece) {
+              var htmlPiece = document.createElement("img");
+              htmlPiece.src = piece.image;
+              htmlPiece.alt = piece.name;
+              htmlPiece.draggable = true;
+              document.getElementById("".concat(col).concat(row + 1)).appendChild(htmlPiece);
+            }
           }
+        } catch (err) {
+          _iterator3.e(err);
+        } finally {
+          _iterator3.f();
         }
       }
     }
@@ -718,22 +797,22 @@ var Game = /*#__PURE__*/function () {
         this.board.squares[6][_i].piece = this.playerBlack.pawns[_i];
       }
 
-      this.board.squares[0][0].piece = this.playerWhite.rooks[0];
-      this.board.squares[0][1].piece = this.playerWhite.knights[0];
-      this.board.squares[0][2].piece = this.playerWhite.bishops[0];
-      this.board.squares[0][3].piece = this.playerWhite.queens[0];
-      this.board.squares[0][4].piece = this.playerWhite.king;
-      this.board.squares[0][5].piece = this.playerWhite.bishops[1];
-      this.board.squares[0][6].piece = this.playerWhite.knights[1];
-      this.board.squares[0][7].piece = this.playerWhite.rooks[1];
-      this.board.squares[7][0].piece = this.playerBlack.rooks[0];
-      this.board.squares[7][1].piece = this.playerBlack.knights[0];
-      this.board.squares[7][2].piece = this.playerBlack.bishops[0];
-      this.board.squares[7][3].piece = this.playerBlack.queens[0];
-      this.board.squares[7][4].piece = this.playerBlack.king;
-      this.board.squares[7][5].piece = this.playerBlack.bishops[1];
-      this.board.squares[7][6].piece = this.playerBlack.knights[1];
-      this.board.squares[7][7].piece = this.playerBlack.rooks[1];
+      this.board.getSquare("a1").piece = this.playerWhite.rooks[0];
+      this.board.getSquare("b1").piece = this.playerWhite.knights[0];
+      this.board.getSquare("c1").piece = this.playerWhite.bishops[0];
+      this.board.getSquare("d1").piece = this.playerWhite.queens[0];
+      this.board.getSquare("e1").piece = this.playerWhite.king;
+      this.board.getSquare("f1").piece = this.playerWhite.bishops[1];
+      this.board.getSquare("g1").piece = this.playerWhite.knights[1];
+      this.board.getSquare("h1").piece = this.playerWhite.rooks[1];
+      this.board.getSquare("a8").piece = this.playerBlack.rooks[0];
+      this.board.getSquare("b8").piece = this.playerBlack.knights[0];
+      this.board.getSquare("c8").piece = this.playerBlack.bishops[0];
+      this.board.getSquare("d8").piece = this.playerBlack.queens[0];
+      this.board.getSquare("e8").piece = this.playerBlack.king;
+      this.board.getSquare("f8").piece = this.playerBlack.bishops[1];
+      this.board.getSquare("g8").piece = this.playerBlack.knights[1];
+      this.board.getSquare("h8").piece = this.playerBlack.rooks[1];
     }
   }]);
 
@@ -749,32 +828,22 @@ var _Game = _interopRequireDefault(require("./Game.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// const cols = ["a", "b", "c", "d", "e", "f", "g", "h"];
-var board = document.getElementById("chess-board"); // Maps letters onto numbers
-// const alphaVal = (s) => s.toLowerCase().charCodeAt(0) - 97 + 1;
-// Get square color
-
-var getSquareColor = function getSquareColor(row, col) {
-  return (row + col + 1) % 2 == 0 ? "white" : "black";
-};
-
-for (var row = 0; row < 8; row++) {
-  var rowDiv = document.createElement("div");
-  rowDiv.setAttribute("class", "row");
-  board.appendChild(rowDiv);
-
-  for (var col = 0; col < 8; col++) {
-    var htmlSquare = document.createElement("div");
-    htmlSquare.id = "".concat(col, "-").concat(row);
-    htmlSquare.className = "square ".concat(getSquareColor(row, col));
-    rowDiv.appendChild(htmlSquare);
-  }
-}
-
+var board = document.getElementById("chess-board");
 var game = new _Game.default();
-console.log(game);
+game.board.renderBoard();
 game.setUpPieces();
 game.board.renderPieces();
+document.getElementById("chess-board").addEventListener("mousedown", function (e) {
+  var div;
+
+  if (e.target.nodeName === "IMG") {
+    div = e.target.parentNode;
+  } else {
+    div = e.target;
+  }
+
+  console.log(game.board.getSquare(div.id).piece);
+});
 },{"./Game.js":"Game.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -803,7 +872,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57385" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52308" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
